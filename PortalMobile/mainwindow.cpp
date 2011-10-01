@@ -7,7 +7,9 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->loadWeb();
+    this->loadPortal();
+
+
 }
 
 MainWindow::~MainWindow()
@@ -69,9 +71,10 @@ void MainWindow::showExpanded()
 #endif
 }
 
-void MainWindow::loadWeb(){
+void MainWindow::loadPortal(){
     QString url = "http://portal.uad.ac.id/mobile/index.php";
-    myWeb = new QWebView();
-    myWeb->load(QUrl(url));
-    myWeb->show();
+    webView = new QWebView();
+    ui->webView->load(QUrl(url));
+    webView->show();
+
 }

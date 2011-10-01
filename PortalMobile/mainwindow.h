@@ -29,10 +29,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QWebView *myWeb;
+    QWebView *webView;
 
-private :
-    loadWeb();
+public:
+    void loadPortal();
 };
 
 #endif // MAINWINDOW_H
